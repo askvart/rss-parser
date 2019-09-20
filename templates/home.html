@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headlines</title>
+</head>
+<body>
+    <h1>Новостная лента</h1>
+    <h2>Вводи в браузере: avto|nedviga|theatr|lenta|fin</h2>
+    {% for article in articles %}
+        <b><a href="{{ article.link }}">{{ article.title }}</a></b><br />
+        <i>{{ article.published }}</i><br />
+        <p>{{ article.summary }}</p>
+    {% endfor %}
+</body>
+</html>
